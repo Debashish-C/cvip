@@ -5,18 +5,19 @@ import { Slider, Table } from '@mui/material'
 import BasicTable from './components/BasicTable'
 import About from './components/About'
 import SliderImg from './components/SliderImg'
+import CVIP from './components/CVIP'
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <div className="cvip-container">
-      <header className="header">
-        <div className="logo">
-          <img src="/iitrpr-logo.png" alt="IIT Ropar Logo" />
-          <h1 style={{color:'red', font:'bold'}}>CVIP 2025</h1>
+      <header className="header shadow-2xl w-full flex justify-around items-center">
+        <div className="logo flex gap-2">
+          {/* <img src="/iitrpr-logo.png" alt="IIT Ropar Logo" /> */}
+          <h1 style={{color:'red', font:'bold',fontWeight:'900'}} className='text-2xl '>CVIP 2025</h1>
         </div>
         <nav className="nav-menu">
-          <ul>
+          <ul className='flex justify-around items-center gap-4 p-4'>
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#call-for-papers">Call for Papers</a></li>
@@ -30,42 +31,12 @@ function App() {
       <SliderImg />
     </div>
       <main>
-          <div className="about" style={{display: 'flex', justifyContent:'space-between'}}>
-            <div className="" style={{width:'50%', padding:'1rem',border:'20px'}}>
-              <h1 style={{fontSize:'28px', padding:'1rem 0 ', fontWeight:900}}>CVIP 2025</h1>
-              <p>The 10th International Conference on Computer Vision & Image Processing (CVIP-2025), a premier annual conference focused on Computer Vision and Image Processing will be held during December 10-13, 2025 at Indian Institute of Technology Ropar (IIT Ropar).
-
-CVIP provides a great platform to students, academia, researchers and industry persons. Previous editions of CVIP were held at IIITDM Kancheepuram (CVIP-2024), IIT Jammu (CVIP-2023), VNIT Nagpur (CVIP-2022), IIT Ropar (CVIP-2021), IIIT Allahabad (CVIP-2020), MNIT Jaipur (CVIP 2019), IIIT Jabalpur (CVIP-2018), and IIT Roorkee (CVIP-2017 and CVIP-2016). All these editions of CVIP have been endorsed by the International Association for Pattern Recognition "IAPR". Also the conference proceedings are published in Springer Series on Communications in Computer and Information Science (CCIS) Springer.
-
-The CVIP 2025 conference proceedings will be published in Springer - CCIS series, indexed in Scopus, SCImago, DBLP, Google Scholar, EI-Compendex, INSPEC and zbMATH.</p>
-            </div>
-            <div className="" style={{width:'50%', padding:'2rem'}}>
-              <h1 style={{font:'bold', fontWeight:'600',fontSize:'18px'}}>Latest News</h1>
-              <div className="" style={{padding:'20px'}}>
-                <h1 style={{font:'bold', fontWeight:'600',fontSize:'18px'}}>Paper Submissions Open</h1>
-                <h1>Submit your paper here. Paper Submission deadline: April 25, 2025. Kindly refer to Call for Papers and Author Guidelines for more details.</h1>
-              </div>
-              <div className="" style={{padding:'20px'}}>
-                <h1 style={{font:'bold', fontWeight:'600',fontSize:'18px'}}>Sponsorship Opportunities
-                </h1>
-                <h1>Submit your paper here. Paper Submission deadline: April 25, 2025. Kindly refer to Call for Papers and Author Guidelines for more details.</h1>
-              </div>
-              <div className="" style={{padding:'20px'}}>
-                <h1 style={{font:'bold', fontWeight:'600',fontSize:'18px'}}>Co-organizers</h1>
-                <h1>Submit your paper here. Paper Submission deadline: April 25, 2025. Kindly refer to Call for Papers and Author Guidelines for more details.</h1>
-              </div>
-
-            </div>
-          </div>
-
-        <section className="important-dates" id="important-dates" style={{display:'flex', justifyContent:'space-evenly'}}>
-          <div className=""><h1>Venue</h1>
-          
+      <CVIP/>
+        <section className="important-dates bg-white shadow-md pt-20  pb-20 rounded-md " id="important-dates" style={{display:'flex', justifyContent:'space-evenly'}}>
+          <div className=""><h1 className='text-2xl font-bold'>Venue</h1>
           <h2>IIT Ropar, Punjab, India</h2>
           </div>
           <div className="">
-
-
             <h1>Date: December 10 - December 13, 2025</h1>
             <h2>Time: 9:00 AM - 5:00 PM IST</h2>
           </div><div className="" style={{display:'flex'}}>
@@ -81,13 +52,13 @@ The CVIP 2025 conference proceedings will be published in Springer - CCIS series
 
 
       <div className="">
-        <h1 style={{textAlign:'center', fontSize:'24px'}}>Important DeadLines</h1>
+        <h1 style={{textAlign:'center', fontSize:'24px'}} className='text-3xl pt-10 font-medium'>Important DeadLines</h1>
         <BasicTable />
       </div>
 
-      <div className="about" style={{display:'flex'}}>
+      <div className="about bg-gray-100 pt-10 pb-10 mt-5" style={{display:'flex'}} >
         <div className="img" style={{minWidth:'50%'}}>.</div>
-        <div className="">
+        <div className="" >
           <About/>
         </div>
       </div>
@@ -100,7 +71,7 @@ The CVIP 2025 conference proceedings will be published in Springer - CCIS series
           <li>Registration</li>
           <li>IIT Roper</li>
         </ul>
-        <p >© 2025 Indian Institute of Technology Ropar. All rights reserved.</p>
+        <p className=''>© 2025 Indian Institute of Technology Ropar. All rights reserved.</p>
       </footer>
     </div>
   )

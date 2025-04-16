@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function About() {
   return (
-    <div>
+    <div className='pt-10 bg-gray-100'>
       <h1 style={{fontSize:'22px',fontWeight:'800',padding:"10px 0"}}>About IIT Ropar</h1>
       <h2>Indian Institute of Technology Ropar (IIT Ropar) is one of the premier institutes of higher education in India. Established in 2008, the institute is committed to providing state-of-the-art education and conducting cutting-edge research in engineering, science, and technology.</h2>
      <br/>

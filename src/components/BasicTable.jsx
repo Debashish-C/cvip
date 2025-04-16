@@ -23,9 +23,10 @@ const rows = [
 ];
 
 export default function BasicTable() {
-  return (
-    <TableContainer component={Paper}>
-      <Table sx={{ minWidth: 650 }} aria-label="simple table">
+  return (<div className="flex justify-center items-center">
+
+    <TableContainer component={Paper} className='max-w-4/6'>
+      <Table  aria-label="simple table">
         <TableHead>
           <TableRow>
             <TableCell>Phase</TableCell>
@@ -35,8 +36,8 @@ export default function BasicTable() {
         <TableBody>
           {rows.map((row) => (
             <TableRow
-              key={row.name}
-              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+            key={row.name}
+            sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
             >
               <TableCell component="th" scope="row">
                 {row.name}
@@ -47,5 +48,6 @@ export default function BasicTable() {
         </TableBody>
       </Table>
     </TableContainer>
+          </div>
   );
 }
